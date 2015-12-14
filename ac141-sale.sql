@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2015 at 04:02 AM
+-- Generation Time: Dec 14, 2015 at 04:22 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -93,9 +93,15 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sale`
+--
+ALTER TABLE `sale`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sale_line`
 --
-ALTER TABLE `sale-line`
+ALTER TABLE `sale_line`
   ADD PRIMARY KEY (`id`);
 
 --
