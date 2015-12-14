@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2015 at 03:40 AM
+-- Generation Time: Dec 14, 2015 at 04:02 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -36,6 +36,13 @@ CREATE TABLE `products` (
   `uom` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `list_price`, `cost_price`, `type`, `category`, `uom`) VALUES
+(1, 'Paracetamol', '7.00', '5.00', 'Capsule', 'Pain Reliver', 'piece');
+
 -- --------------------------------------------------------
 
 --
@@ -60,10 +67,10 @@ CREATE TABLE `sale` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sale-line`
+-- Table structure for table `sale_line`
 --
 
-CREATE TABLE `sale-line` (
+CREATE TABLE `sale_line` (
   `id` int(11) NOT NULL,
   `category` varchar(100) NOT NULL,
   `date` date NOT NULL,
@@ -86,7 +93,7 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sale-line`
+-- Indexes for table `sale_line`
 --
 ALTER TABLE `sale-line`
   ADD PRIMARY KEY (`id`);
@@ -99,11 +106,11 @@ ALTER TABLE `sale-line`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `sale-line`
+-- AUTO_INCREMENT for table `sale_line`
 --
-ALTER TABLE `sale-line`
+ALTER TABLE `sale_line`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
