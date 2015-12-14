@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2015 at 03:29 AM
+-- Generation Time: Dec 14, 2015 at 03:40 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -34,6 +34,27 @@ CREATE TABLE `products` (
   `type` varchar(10) NOT NULL,
   `category` varchar(100) NOT NULL,
   `uom` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sale`
+--
+
+CREATE TABLE `sale` (
+  `id` int(11) NOT NULL,
+  `patients_name` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `birth_date` varchar(20) NOT NULL,
+  `ward/service` varchar(100) NOT NULL,
+  `tel._no` int(11) NOT NULL,
+  `age` int(2) NOT NULL,
+  `nationality` varchar(20) NOT NULL,
+  `date_admitted` int(11) NOT NULL,
+  `date_discharge` int(11) NOT NULL,
+  `sex` varchar(1) NOT NULL,
+  `civil_status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
